@@ -17,6 +17,7 @@ import {
   User,
   FileText
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 
@@ -312,6 +313,12 @@ const Report = () => {
             <p className="text-muted-foreground">Comprehensive health analysis and recommendations</p>
           </div>
           <div className="flex space-x-4">
+            <Link to="/digital-twin">
+              <Button variant="outline" className="flex items-center space-x-2">
+                <User className="h-4 w-4" />
+                <span>View Digital Twin</span>
+              </Button>
+            </Link>
             <Button variant="outline" className="flex items-center space-x-2">
               <QrCode className="h-4 w-4" />
               <span>Verify Report</span>

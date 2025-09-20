@@ -12,11 +12,19 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    navigate("/dashboard");
+    if (role === "doctor") {
+      navigate("/doctor-dashboard");
+    } else {
+      navigate("/patient-dashboard");
+    }
   };
 
   const handleGuestLogin = () => {
-    navigate("/dashboard");
+    if (role === "doctor") {
+      navigate("/doctor-dashboard");
+    } else {
+      navigate("/patient-dashboard");
+    }
   };
 
   return (
