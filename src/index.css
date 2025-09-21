@@ -2,66 +2,74 @@
 @tailwind components;
 @tailwind utilities;
 
-/* SIMHEALTH Medical Theme Design System */
+/* SIMHEALTH Futuristic Medical Theme Design System */
 
 @layer base {
   :root {
-    /* Core medical theme colors */
-    --background: 0 0% 100%;
-    --foreground: 215 25% 27%;
+    /* Futuristic dark background */
+    --background: 220 35% 6%;
+    --foreground: 180 100% 85%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 215 25% 27%;
+    --card: 220 35% 8%;
+    --card-foreground: 180 100% 85%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 27%;
+    --popover: 220 35% 8%;
+    --popover-foreground: 180 100% 85%;
 
-    /* Medical blue primary palette */
-    --primary: 213 94% 68%;
-    --primary-foreground: 0 0% 100%;
-    --primary-soft: 213 100% 95%;
+    /* Cyber medical blue neon */
+    --primary: 200 100% 50%;
+    --primary-foreground: 220 35% 6%;
+    --primary-soft: 200 100% 95%;
+    --primary-glow: 200 100% 70%;
 
-    /* Medical green accent palette */
-    --medical-green: 142 69% 58%;
-    --medical-green-foreground: 0 0% 100%;
-    --medical-green-soft: 142 69% 95%;
+    /* Cyber medical green neon */
+    --medical-green: 142 85% 55%;
+    --medical-green-foreground: 220 35% 6%;
+    --medical-green-soft: 142 85% 95%;
+    --medical-green-glow: 142 85% 75%;
 
-    /* Status colors for health indicators */
-    --health-good: 142 69% 58%;
-    --health-warning: 43 96% 56%;
-    --health-critical: 0 84% 60%;
+    /* Futuristic status colors */
+    --health-good: 142 85% 55%;
+    --health-warning: 45 100% 60%;
+    --health-critical: 0 100% 65%;
 
-    --secondary: 213 100% 97%;
-    --secondary-foreground: 215 25% 27%;
+    --secondary: 220 35% 12%;
+    --secondary-foreground: 180 100% 85%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 220 35% 15%;
+    --muted-foreground: 180 50% 65%;
 
-    --accent: 213 100% 95%;
-    --accent-foreground: 215 25% 27%;
+    --accent: 200 100% 20%;
+    --accent-foreground: 180 100% 85%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 100% 65%;
+    --destructive-foreground: 220 35% 6%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 213 94% 68%;
+    --border: 200 50% 25%;
+    --input: 220 35% 12%;
+    --ring: 200 100% 50%;
 
     --radius: 0.75rem;
 
-    /* Medical gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(213 94% 68%), hsl(213 94% 78%));
-    --gradient-medical: linear-gradient(135deg, hsl(213 94% 68%), hsl(142 69% 58%));
-    --gradient-hero: linear-gradient(135deg, hsl(213 100% 97%), hsl(142 69% 95%));
+    /* Futuristic cyber gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(200 100% 50%), hsl(200 100% 70%));
+    --gradient-medical: linear-gradient(135deg, hsl(200 100% 50%), hsl(142 85% 55%));
+    --gradient-cyber: linear-gradient(135deg, hsl(220 35% 6%), hsl(220 35% 12%));
+    --gradient-neon: linear-gradient(90deg, hsl(200 100% 50%), hsl(142 85% 55%), hsl(45 100% 60%));
+    --gradient-body: radial-gradient(circle, hsl(200 100% 50% / 0.3), hsl(220 35% 6%));
     
-    /* Shadows for medical cards */
-    --shadow-card: 0 4px 6px -1px hsl(213 94% 68% / 0.1);
-    --shadow-card-hover: 0 10px 25px -3px hsl(213 94% 68% / 0.15);
-    --shadow-floating: 0 20px 25px -5px hsl(213 94% 68% / 0.1), 0 10px 10px -5px hsl(213 94% 68% / 0.04);
+    /* Neon glowing shadows */
+    --shadow-neon-blue: 0 0 20px hsl(200 100% 50% / 0.5);
+    --shadow-neon-green: 0 0 20px hsl(142 85% 55% / 0.5);
+    --shadow-neon-warning: 0 0 20px hsl(45 100% 60% / 0.5);
+    --shadow-neon-critical: 0 0 20px hsl(0 100% 65% / 0.5);
+    --shadow-card: 0 8px 32px hsl(200 100% 50% / 0.15);
+    --shadow-card-hover: 0 16px 48px hsl(200 100% 50% / 0.25);
 
-    /* Animation transitions */
+    /* Futuristic animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --transition-glow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-cyber: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
     --sidebar-background: 0 0% 98%;
 
@@ -81,41 +89,42 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Enhanced dark mode for cyber theme */
+    --background: 220 45% 4%;
+    --foreground: 180 100% 90%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 45% 6%;
+    --card-foreground: 180 100% 90%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 45% 6%;
+    --popover-foreground: 180 100% 90%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 200 100% 60%;
+    --primary-foreground: 220 45% 4%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 220 45% 10%;
+    --secondary-foreground: 180 100% 90%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 220 45% 12%;
+    --muted-foreground: 180 60% 70%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 200 100% 25%;
+    --accent-foreground: 180 100% 90%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 100% 70%;
+    --destructive-foreground: 220 45% 4%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 200 60% 30%;
+    --input: 220 45% 10%;
+    --ring: 200 100% 60%;
+    --sidebar-background: 220 45% 4%;
+    --sidebar-foreground: 180 100% 85%;
+    --sidebar-primary: 200 100% 50%;
+    --sidebar-primary-foreground: 220 45% 4%;
+    --sidebar-accent: 220 45% 8%;
+    --sidebar-accent-foreground: 180 100% 85%;
+    --sidebar-border: 200 50% 25%;
+    --sidebar-ring: 200 100% 50%;
   }
 }
 
@@ -130,29 +139,58 @@
 }
 
 @layer components {
-  /* Medical UI Components */
-  .medical-card {
-    @apply bg-card shadow-[var(--shadow-card)] rounded-[var(--radius)] border border-border p-6 transition-[var(--transition-smooth)] hover:shadow-[var(--shadow-card-hover)];
+  /* Futuristic Cyber Medical Components */
+  .cyber-card {
+    @apply bg-card shadow-[var(--shadow-card)] rounded-[var(--radius)] border border-border p-6 transition-[var(--transition-glow)] hover:shadow-[var(--shadow-card-hover)] hover:border-primary/50 backdrop-blur-sm relative overflow-hidden;
+  }
+  
+  .cyber-card::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none;
+  }
+  
+  .neon-border {
+    @apply border border-primary/30 shadow-[var(--shadow-neon-blue)] transition-[var(--transition-glow)];
   }
   
   .health-status-good {
-    @apply bg-[hsl(var(--health-good))] text-[hsl(var(--medical-green-foreground))];
+    @apply bg-[hsl(var(--health-good))] text-[hsl(var(--medical-green-foreground))] shadow-[var(--shadow-neon-green)];
   }
   
   .health-status-warning {
-    @apply bg-[hsl(var(--health-warning))] text-white;
+    @apply bg-[hsl(var(--health-warning))] text-black shadow-[var(--shadow-neon-warning)];
   }
   
   .health-status-critical {
-    @apply bg-[hsl(var(--health-critical))] text-white;
+    @apply bg-[hsl(var(--health-critical))] text-white shadow-[var(--shadow-neon-critical)];
   }
 
-  .gradient-hero {
-    background: var(--gradient-hero);
+  .gradient-cyber {
+    background: var(--gradient-cyber);
   }
   
-  .gradient-medical {
-    background: var(--gradient-medical);
+  .gradient-neon {
+    background: var(--gradient-neon);
+  }
+
+  .gradient-body {
+    background: var(--gradient-body);
+  }
+
+  .glow-blue {
+    box-shadow: var(--shadow-neon-blue);
+  }
+
+  .glow-green {
+    box-shadow: var(--shadow-neon-green);
+  }
+
+  .glow-warning {
+    box-shadow: var(--shadow-neon-warning);
+  }
+
+  .glow-critical {
+    box-shadow: var(--shadow-neon-critical);
   }
 
   .animate-fade-in {
@@ -165,6 +203,22 @@
 
   .animate-float {
     animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+
+  .animate-scan-line {
+    animation: scanLine 3s linear infinite;
+  }
+
+  .animate-data-flow {
+    animation: dataFlow 4s linear infinite;
+  }
+
+  .human-body-glow {
+    filter: drop-shadow(0 0 20px hsl(200 100% 50% / 0.8));
   }
 }
 
@@ -196,5 +250,37 @@
   }
   50% {
     transform: translateY(-10px);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(200 100% 50% / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px hsl(200 100% 50% / 0.8);
+  }
+}
+
+@keyframes scanLine {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes dataFlow {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100vw);
   }
 }

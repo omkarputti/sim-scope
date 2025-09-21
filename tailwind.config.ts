@@ -52,6 +52,12 @@ export default {
           green: "hsl(var(--medical-green))",
           "green-foreground": "hsl(var(--medical-green-foreground))",
           "green-soft": "hsl(var(--medical-green-soft))",
+          "green-glow": "hsl(var(--medical-green-glow))",
+        },
+        cyber: {
+          primary: "hsl(var(--primary))",
+          glow: "hsl(var(--primary-glow))",
+          background: "hsl(var(--background))",
         },
         health: {
           good: "hsl(var(--health-good))",
@@ -95,6 +101,10 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "pulse-glow": "pulseGlow 2s ease-in-out infinite",
+        "scan-line": "scanLine 3s linear infinite",
+        "data-flow": "dataFlow 4s linear infinite",
+        "float": "float 3s ease-in-out infinite",
       },
     },
   },
